@@ -25,8 +25,9 @@ build_suff="-64-sse2-full"
 #
 # The values here may correspond to MACHTYPE='x86SSE2', V flags SSE2 | SSE1
 config_opts="-b 64 -Si archdef 0 -A 15 -V 768 \
-    --with-netlib-lapack-tarfile=${lapack_tarfile}
-    -Fa al '-mfpmath=sse -msse2'"
+    --with-netlib-lapack-tarfile=${lapack_tarfile} \
+    -Fa al '-mfpmath=sse -msse2' \
+    -t 1"
 
 # You usually don't need to change these guys
 atlas_home="${code_home}/atlas"
